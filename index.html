@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>وش حقّي؟</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="دليل مبسّط لحقوق المتسوّق أونلاين في السعودية: اعرفي حقك، افحصي المتجر، واحسبي مهلتك، مع رسائل جاهزة للمتجر.">
+<meta property="og:title" content="وش حقّي؟ · دليل حقوق المتسوّق أونلاين">
+<meta property="og:description" content="منتج غلط؟ توصيل متأخر؟ ما رجّعوا فلوسك؟ اعرفي حقك بالنظام في دقيقة، مع رسالة جاهزة للمتجر.">
+<meta property="og:image" content="https://worood-sa.github.io/haqqi/og.png">
+<meta property="og:url" content="https://worood-sa.github.io/haqqi/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M12 4h40v52l-6.7-4-6.6 4-6.7-4-6.7 4-6.6-4L12 56z' fill='%230f6b55'/%3E%3Cpath d='M22 31l7 7 14-15' fill='none' stroke='%23f4ead6' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
+<style>
+/* layout: receipt-paper identity. hero = live wizard; then sections stacked in one 1080px column, cards in 2-col grids that collapse to 1 */
+:root{
+ --paper:#f4efe4;--sheet:#fffcf5;--ink:#17231f;--mu:#5b6862;--ln:#dcd3c1;--ac:#0f6b55;--ac-ink:#fffcf5;--tint:#e2efe9;
+ --sand:#b98a3b;--sand-t:#f3e6cc;--ok:#1d7a4f;--ok-t:#dff0e5;--warn:#9a6a12;--warn-t:#f6ebcf;--bad:#a8432c;--bad-t:#f6e1da;
+ --disp:"Readex Pro","IBM Plex Sans Arabic",Tahoma,sans-serif;--body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;--r:18px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#0f1513;--sheet:#17201c;--ink:#e8eee9;--mu:#9fb0a8;--ln:#2a3731;--ac:#58c3a1;--ac-ink:#0f1513;--tint:#1a2f28;
+ --sand:#d8ad62;--sand-t:#33291a;--ok:#6fd39a;--ok-t:#18301f;--warn:#e7bd62;--warn-t:#33291a;--bad:#ef9a83;--bad-t:#3a211b;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0f1513;--sheet:#17201c;--ink:#e8eee9;--mu:#9fb0a8;--ln:#2a3731;--ac:#58c3a1;--ac-ink:#0f1513;--tint:#1a2f28;
+ --sand:#d8ad62;--sand-t:#33291a;--ok:#6fd39a;--ok-t:#18301f;--warn:#e7bd62;--warn-t:#33291a;--bad:#ef9a83;--bad-t:#3a211b;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;
+ background-image:radial-gradient(var(--ln) 1px,transparent 1px);background-size:22px 22px;background-attachment:fixed}
+.g{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.in{max-width:1080px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--disp);margin:0;text-wrap:balance;line-height:1.25}
+button{font:inherit;color:inherit}
+a{color:var(--ac)}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:6px}
+[dir=ltr] body,[dir=ltr]{font-family:var(--body)}
+/* top bar */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--sheet)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--sheet) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.top .in{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--disp);font-weight:700;font-size:20px;white-space:nowrap}
+.logo svg{width:30px;height:30px;flex:none}
+nav.links{display:flex;gap:4px;margin-inline-start:auto;overflow-x:auto;scrollbar-width:none}
+nav.links a{padding:6px 12px;border-radius:999px;color:var(--mu);text-decoration:none;font-size:14px;white-space:nowrap}
+nav.links a:hover{background:var(--tint);color:var(--ac)}
+.lang{border:1px solid var(--ln);background:var(--sheet);border-radius:999px;padding:5px 14px;font-weight:700;cursor:pointer;font-size:14px;flex:none}
+@media (max-width:760px){nav.links{display:none}.lang{margin-inline-start:auto}}
+/* hero */
+.hero{padding-block:44px 30px}
+.hero .in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);grid-template-areas:"text wiz" "side wiz";column-gap:40px;row-gap:0;align-items:center}
+.h-text{grid-area:text;align-self:end}.h-side{grid-area:side;align-self:start}.h-wiz{grid-area:wiz}
+@media (max-width:900px){.hero{padding-block:22px 20px}.hero .in{grid-template-columns:1fr;grid-template-areas:"text" "wiz" "side";row-gap:20px}.stamp{display:none}.hero p.lead{font-size:16px}.hero h1{margin:8px 0 14px}.facts{margin-top:0}}
+.eb{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:700;color:var(--ac);background:var(--tint);border-radius:999px;padding:4px 12px;width:fit-content}
+.hero h1{font-size:clamp(52px,10vw,96px);font-weight:700;letter-spacing:-1px;margin:14px 0 22px;line-height:1.15}
+.hero h1 em{font-style:normal;color:var(--ac);position:relative}
+.hero h1 em::after{content:"";position:absolute;inset-inline:0;bottom:.06em;height:.14em;background:var(--sand);opacity:.35;border-radius:4px;z-index:-1}
+.hero p.lead{font-size:18px;color:var(--mu);max-width:44ch;margin:0}
+.stamp{margin-top:22px;width:118px;height:118px;border:3px solid var(--bad);border-radius:50%;display:grid;place-items:center;color:var(--bad);transform:rotate(-12deg);font-family:var(--disp);font-weight:700;text-align:center;line-height:1.2;font-size:15px;opacity:.85;position:relative}
+.stamp::before{content:"";position:absolute;inset:6px;border:1.5px dashed var(--bad);border-radius:50%}
+.facts{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
+.facts div{font-size:13px;color:var(--mu)}.facts b{display:block;font-family:var(--disp);font-size:28px;color:var(--ink);line-height:1.1}
+/* receipt sheet */
+.sheet{background:var(--sheet);border:1px solid var(--ln);border-radius:var(--r) var(--r) 0 0;position:relative;box-shadow:0 24px 50px -30px rgba(20,40,30,.45)}
+.sheet::after{content:"";position:absolute;inset-inline:-1px;bottom:-12px;height:12px;background:
+ linear-gradient(135deg,var(--sheet) 50%,transparent 50%) 0 0/16px 12px repeat-x,linear-gradient(225deg,var(--sheet) 50%,transparent 50%) 0 0/16px 12px repeat-x}
+.wiz{padding:22px 22px 30px}
+.wiz .bar{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mu);border-bottom:1.5px dashed var(--ln);padding-bottom:10px;margin-bottom:16px}
+.dots{display:flex;gap:6px}.dots i{width:22px;height:5px;border-radius:9px;background:var(--ln)}.dots i.on{background:var(--ac)}
+.wiz h2{font-size:22px;margin-bottom:14px}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:460px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:12px;text-align:start;background:var(--paper);border:1.5px solid var(--ln);border-radius:14px;padding:12px;cursor:pointer;transition:border-color .15s,transform .15s}
+.opt:hover{border-color:var(--ac);transform:translateY(-1px)}
+.opt .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--tint);color:var(--ac);font-family:var(--disp);font-weight:700;flex:none}
+.opt span{font-weight:500;line-height:1.4;font-size:15px}
+.opt b{display:block;font-weight:700;font-size:16px}.opt small{display:block;color:var(--mu);font-size:13px;margin-top:2px}
+.opts.one{grid-template-columns:1fr}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.btn{border:none;border-radius:12px;padding:10px 18px;font-weight:700;cursor:pointer;background:var(--ac);color:var(--ac-ink);text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:15px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ln)}
+.btn.wa{background:#1f9d55;color:#fff}
+.btn.sm{padding:7px 12px;font-size:14px;border-radius:10px}
+input[type=text],input[type=date],input[type=search]{font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--ln);border-radius:12px;padding:10px 12px;width:100%;min-width:0}
+input:focus{border-color:var(--ac);outline:none}
+.verdict{border-radius:14px;padding:16px;display:grid;gap:8px}
+.verdict h3{font-size:20px}
+.v-ok{background:var(--ok-t)}.v-ok h3{color:var(--ok)}
+.v-warn{background:var(--warn-t)}.v-warn h3{color:var(--warn)}
+.v-bad{background:var(--bad-t)}.v-bad h3{color:var(--bad)}
+.meter{display:grid;gap:6px}
+.meter .tr{height:12px;border-radius:99px;background:var(--ln);overflow:hidden}
+.meter .fl{height:100%;border-radius:99px;background:var(--ac);transition:width .6s}
+.meter .fl.over{background:var(--bad)}
+.meter .lb{display:flex;justify-content:space-between;font-size:13px;color:var(--mu);font-variant-numeric:tabular-nums}
+.anim{animation:up .35s ease}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* sections */
+section.sec{padding-block:46px;scroll-margin-top:64px}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.sh h2{font-size:clamp(28px,4.5vw,40px)}
+.sh p{margin:4px 0 0;color:var(--mu);max-width:56ch}
+.num-eb{font-family:var(--disp);color:var(--sand);font-weight:700;font-size:14px;letter-spacing:1px}
+/* cases */
+.tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;margin-bottom:14px}
+#msgForm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;background:var(--paper);border:1.5px solid var(--ln);border-radius:12px;padding:12px}
+#msgForm .ftitle{grid-column:1/-1;font-weight:700;font-size:14px}
+@media (max-width:420px){#msgForm{grid-template-columns:1fr}}
+.x-me{background:var(--sheet);border:1px solid var(--ln);border-radius:14px;margin-bottom:16px}
+details.me summary{cursor:pointer;padding:12px 16px;font-weight:700;list-style:none;display:flex;justify-content:space-between}
+details.me summary::-webkit-details-marker{display:none}
+details.me .fields{padding:0 16px 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:760px){details.me .fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){details.me .fields{grid-template-columns:1fr}}
+label.f{display:grid;gap:4px;font-size:13px;color:var(--mu)}
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+@media (max-width:820px){.cases{grid-template-columns:1fr}}
+details.case{background:var(--sheet);border:1px solid var(--ln);border-radius:var(--r);scroll-margin-top:90px}
+details.case[open]{grid-column:1/-1;border-color:var(--ac);box-shadow:0 20px 40px -28px rgba(15,107,85,.6)}
+details.case>summary{list-style:none;cursor:pointer;padding:16px 18px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center}
+details.case>summary::-webkit-details-marker{display:none}
+.cic{width:46px;height:46px;border-radius:13px;background:var(--tint);color:var(--ac);display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:20px}
+details.case h3{font-size:18px}
+details.case summary small{display:block;color:var(--mu);font-size:13px;font-family:var(--body);line-height:1.5}
+.chev{color:var(--mu);transition:transform .2s}
+details[open]>summary .chev{transform:rotate(180deg)}
+.cb{padding:0 18px 20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:820px){.cb{grid-template-columns:1fr}}
+.cb .col{display:grid;gap:12px;align-content:start;min-width:0}
+.right{background:var(--tint);border-radius:14px;padding:14px 16px}
+.lab{display:block;font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.4px;color:var(--ac);margin-bottom:2px}
+.right p,.cb p{margin:0}
+.no{background:var(--bad-t);color:var(--bad);border-radius:12px;padding:10px 14px;font-size:14px}
+ol.do{margin:0;padding-inline-start:22px;display:grid;gap:4px}
+.law{font-size:13px;color:var(--mu);border-inline-start:3px solid var(--sand);padding-inline-start:10px}
+.msg{border:1.5px dashed var(--ln);border-radius:12px;padding:14px;background:var(--paper);white-space:pre-wrap;font-size:15px;line-height:1.85}
+.msg mark{background:transparent;color:var(--ac);font-weight:700}
+.msg .ph{color:var(--sand);font-weight:700}
+.empty{color:var(--mu);text-align:center;padding:20px}
+/* checker */
+.chk{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:860px){.chk{grid-template-columns:1fr}}
+.qs{display:grid;gap:10px}
+.q{background:var(--sheet);border:1px solid var(--ln);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+.q p{margin:0;font-size:15px}
+.yn{display:flex;border:1.5px solid var(--ln);border-radius:10px;overflow:hidden}
+.yn button{border:none;background:transparent;padding:6px 14px;cursor:pointer;font-weight:700;font-size:14px}
+.yn button.on{background:var(--ac);color:var(--ac-ink)}
+.yn button.on.risk{background:var(--bad);color:#fff}
+.gauge{position:sticky;top:84px}
+.gauge .sheet{padding:20px 20px 28px;display:grid;gap:12px}
+.gauge .big{font-family:var(--disp);font-size:30px;font-weight:700}
+.flags{margin:0;padding-inline-start:20px;font-size:14px;color:var(--mu);display:grid;gap:4px}
+/* calc */
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.calc{grid-template-columns:1fr}}
+.calc .sheet{padding:20px 20px 28px;display:grid;gap:12px}
+.calc h3{font-size:19px}
+.calc .res{font-weight:700}
+/* ladder */
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;list-style:none;margin:0;padding:0;counter-reset:l}
+@media (max-width:860px){.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.ladder{grid-template-columns:1fr}}
+.ladder li{background:var(--sheet);border:1px solid var(--ln);border-radius:var(--r);padding:18px;counter-increment:l;display:grid;gap:6px;align-content:start}
+.ladder li::before{content:counter(l);width:38px;height:38px;border-radius:50%;background:var(--ac);color:var(--ac-ink);display:grid;place-items:center;font-family:var(--disp);font-weight:700}
+.ladder b{font-family:var(--disp)}
+[dir=rtl] .ladder li::before{content:counter(l,arabic-indic)}
+.ladder span{color:var(--mu);font-size:14px}
+.tel{font-family:var(--disp);font-weight:700;color:var(--ac);direction:ltr;unicode-bidi:isolate}
+.alert{margin-top:14px;background:var(--bad-t);color:var(--bad);border-radius:14px;padding:12px 16px;font-size:15px}
+footer{border-top:1px solid var(--ln);padding-block:26px 40px;color:var(--mu);font-size:13px}
+footer .in{display:grid;gap:8px}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:12px;opacity:0;transition:.25s;z-index:50;font-weight:700;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.tabbar{display:none}
+@media (max-width:760px){
+ .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;inset:auto 0 0;z-index:25;background:color-mix(in srgb,var(--sheet) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--ln);
+  padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+ .tabbar a{display:grid;justify-items:center;gap:2px;padding:8px 2px 7px;text-decoration:none;color:var(--mu);font-size:11.5px;font-weight:700}
+ .tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+ .tabbar a.on{color:var(--ac)}
+ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+ .toast{bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head><body>
+
+<header class="top g"><div class="in">
+  <a class="logo" href="#top" aria-label="وش حقّي"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 4h40v52l-6.7-4-6.6 4-6.7-4-6.7 4-6.6-4L12 56z" fill="var(--ac)"/><path d="M22 31l7 7 14-15" fill="none" stroke="var(--sheet)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i="brand">وش حقّي؟</span></a>
+  <nav class="links" aria-label="الأقسام"><a href="#cases" data-i="nav1">المواقف</a><a href="#check" data-i="nav3">افحصي المتجر</a><a href="#calc" data-i="nav4">حاسبة المهلة</a><a href="#help" data-i="nav5">الشكوى</a></nav>
+  <button class="lang" id="lang" type="button">English</button>
+</div></header>
+
+<main id="top">
+<section class="hero g" id="ask"><div class="in">
+  <div class="h-text">
+    <span class="eb" data-i="eb">دليل حقوق المتسوّق أونلاين في السعودية</span>
+    <h1 data-i-html="h1">وش <em>حقّي</em>؟</h1>
+    <p class="lead" data-i="lead">جاوبي على سؤالين، ونقولك حقك بالنظام بكلام بسيط، وكم باقي لك من المهلة، ورسالة جاهزة ترسلينها للمتجر.</p>
+  </div>
+  <div class="h-side"><div class="facts"><div><b>٧</b><span data-i="f1">أيام للإلغاء من الاستلام</span></div><div><b>١٥</b><span data-i="f2">يوم تأخير يحق لك بعدها تلغين</span></div><div><b class="tel">1900</b><span data-i="f3">وزارة التجارة</span></div></div>
+    <div class="stamp" aria-hidden="true"><span data-i-html="stamp">حقّك<br>محفوظ</span></div></div>
+  <div class="sheet h-wiz"><div class="wiz" id="wiz" aria-live="polite"></div></div>
+</div></section>
+
+<section class="sec g" id="cases"><div class="in">
+  <div class="sh"><div><div class="num-eb">01</div><h2 data-i="cTitle">كل المواقف</h2><p data-i="cSub">افتحي موقفك: حقك، والحالات اللي ما ينطبق فيها، والخطوات، ورسالة جاهزة.</p></div></div>
+  <div id="formPark" hidden><div class="fields" id="msgForm"><div class="ftitle" data-i="meT">✎ بيانات رسالتك (اختياري)</div>
+      <label class="f" for="f-store"><span data-i="fStore">اسم المتجر</span><input type="text" id="f-store"></label>
+      <label class="f" for="f-order"><span data-i="fOrder">رقم الطلب</span><input type="text" id="f-order"></label>
+      <label class="f" for="f-date"><span data-i="fDate">تاريخ الطلب</span><input type="date" id="f-date"></label>
+      <label class="f" for="f-name"><span data-i="fName">اسمك</span><input type="text" id="f-name"></label>
+    </div></div>
+  <div class="tools"><input type="search" id="q" aria-label="بحث"></div>
+  <div class="cases" id="caseList"></div>
+  <p class="empty" id="empty" hidden data-i="empty">ما لقينا موقف بهذا الوصف. جرّبي كلمة ثانية.</p>
+</div></section>
+
+
+<section class="sec g" id="check"><div class="in">
+  <div class="sh"><div><div class="num-eb">02</div><h2 data-i="kTitle">افحصي المتجر قبل ما تشترين</h2><p data-i="kSub">جاوبي عن المتجر اللي ناوية تشترين منه، ونقولك إذا يبان موثوق.</p></div><button class="btn ghost sm" id="kReset" type="button" data-i="reset">ابدئي من جديد</button></div>
+  <div class="chk"><div class="qs" id="qList"></div><div class="gauge"><div class="sheet" id="gauge"></div></div></div>
+</div></section>
+
+<section class="sec g" id="calc"><div class="in">
+  <div class="sh"><div><div class="num-eb">03</div><h2 data-i="tTitle">حاسبة المهلة</h2><p data-i="tSub">حطي التاريخ ونحسب لك كم باقي.</p></div></div>
+  <div class="calc">
+    <div class="sheet"><h3 data-i="t1">مهلة الإلغاء والإرجاع</h3><label class="f" for="c-rec"><span data-i="t1l">تاريخ استلام المنتج</span><input type="date" id="c-rec"></label><div id="c-rec-out"></div></div>
+    <div class="sheet"><h3 data-i="t2">تأخر التوصيل</h3><label class="f" for="c-ord"><span data-i="t2l">تاريخ الطلب (أو الموعد المتفق عليه)</span><input type="date" id="c-ord"></label><div id="c-ord-out"></div></div>
+  </div>
+</div></section>
+
+<section class="sec g" id="help"><div class="in">
+  <div class="sh"><div><div class="num-eb">04</div><h2 data-i="hTitle">إذا المتجر ما تجاوب</h2><p data-i="hSub">بالترتيب، ولا تقفزين خطوة.</p></div></div>
+  <ol class="ladder">
+    <li><b data-i="l1">تواصلي كتابيًا</b><span data-i="l1s">رسالة أو إيميل للمتجر، واحفظي صورة. هذا أول دليل لك.</span></li>
+    <li><b data-i="l2">بلاغ لوزارة التجارة</b><span data-i-html="l2s">تطبيق «بلاغ تجاري» أو اتصلي على <span class="tel">1900</span>. أرفقي الفاتورة وإثبات الدفع والمحادثات.</span></li>
+    <li><b data-i="l3">البنك</b><span data-i="l3s">إذا دفعتي ببطاقة وما رجّعوا الفلوس، اسألي البنك عن الاعتراض على العملية.</span></li>
+    <li><b data-i="l4">المحكمة المختصة</b><span data-i="l4s">للنزاعات والتعويض إذا ما انحلت.</span></li>
+  </ol>
+  <div class="alert" data-i="alert">انتبهي: لا تعطين أحد بيانات بطاقتك أو رمز التحقق بحجة «نقدّم البلاغ عنك». البلاغ يكون من القنوات الرسمية بس، ومجاني.</div>
+</div></section>
+</main>
+
+<footer class="g"><div class="in">
+  <div data-i-html="foot1">معلومات توعوية مبسّطة من نظام التجارة الإلكترونية، وليست استشارة قانونية. الأنظمة ممكن تتعدّل، فارجعي للنص الرسمي في <a href="https://laws.boe.gov.sa" target="_blank" rel="noopener">هيئة الخبراء بمجلس الوزراء</a> ولوزارة التجارة. آخر مراجعة: أكتوبر ٢٠٢٦.</div>
+  <div data-i="foot2">إعداد: ورود عواض · تقنية التجارة الإلكترونية · الكلية التقنية للبنات بعنيزة</div>
+</div></footer>
+<nav class="tabbar" aria-label="الأقسام">
+  <a href="#ask" data-sec="ask"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 13.5v.5m0-8a2.5 2.5 0 0 1 1.5 4.5c-.9.6-1.5 1-1.5 2"/></svg><span data-i="tb1">اسألي</span></a>
+  <a href="#cases" data-sec="cases"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span data-i="nav1">المواقف</span></a>
+  <a href="#check" data-sec="check"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i="tb3">افحصي</span></a>
+  <a href="#calc" data-sec="calc"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span data-i="tb4">المهلة</span></a>
+  <a href="#help" data-sec="help"><svg viewBox="0 0 24 24"><path d="M5 20V5a1 1 0 0 1 1-1h11l-2.5 4L17 12H6"/></svg><span data-i="nav5">الشكوى</span></a>
+</nav>
+<div class="toast" id="toast" role="status"></div>
+<noscript><p style="text-align:center;padding:20px">الموقع يحتاج تشغيل JavaScript.</p></noscript>
+
+<script>
+(function(){
+const SITE="https://worood-sa.github.io/haqqi/";
+const $=id=>document.getElementById(id);
+let L="ar";
+try{const s=localStorage.getItem("haqqi-lang");if(s==="en"||s==="ar")L=s}catch(e){}
+if(location.hash==="#en")L="en";
+
+/* ---------------- UI strings ---------------- */
+const T={
+ar:{brand:"وش حقّي؟",nav1:"المواقف",tb1:"اسألي",tb3:"افحصي",tb4:"المهلة",nav2:"صح ولا خطأ؟",nav3:"افحصي المتجر",nav4:"حاسبة المهلة",nav5:"الشكوى",eb:"دليل حقوق المتسوّق أونلاين في السعودية",h1:"وش <em>حقّي</em>؟",
+lead:"جاوبي على سؤالين، ونقولك حقك بالنظام بكلام بسيط، وكم باقي لك من المهلة، ورسالة جاهزة ترسلينها للمتجر.",f1:"أيام للإلغاء من الاستلام",f2:"يوم تأخير يحق لك بعدها تلغين",f3:"وزارة التجارة",stamp:"حقّك<br>محفوظ",
+cTitle:"كل المواقف",cSub:"افتحي موقفك: حقك، والحالات اللي ما ينطبق فيها، والخطوات، ورسالة جاهزة.",meT:"✎ عبّي بياناتك وتنحط في الرسالة (اختياري)",fStore:"اسم المتجر",fOrder:"رقم الطلب",fDate:"تاريخ الطلب",fName:"اسمك",search:"ابحثي: تأخر، تالف، فاتورة، رسائل…",empty:"ما لقينا موقف بهذا الوصف. جرّبي كلمة ثانية.",
+mTitle:"صح ولا خطأ؟",mSub:"كلام نسمعه كثير. اختاري جوابك وشوفي الصح.",yes:"صح",no:"خطأ",score:(a,b)=>`عرفتي ${a} من ${b}`,
+kTitle:"افحصي المتجر قبل ما تشترين",kSub:"جاوبي عن المتجر اللي ناوية تشترين منه، ونقولك إذا يبان موثوق.",reset:"ابدئي من جديد",yesB:"نعم",noB:"لا",
+tTitle:"حاسبة المهلة",tSub:"حطي التاريخ ونحسب لك كم باقي.",t1:"مهلة الإلغاء والإرجاع",t1l:"تاريخ استلام المنتج",t2:"تأخر التوصيل",t2l:"تاريخ الطلب (أو الموعد المتفق عليه)",
+hTitle:"إذا المتجر ما تجاوب",hSub:"بالترتيب، ولا تقفزين خطوة.",l1:"تواصلي كتابيًا",l1s:"رسالة أو إيميل للمتجر، واحفظي صورة. هذا أول دليل لك.",l2:"بلاغ لوزارة التجارة",l2s:"تطبيق «بلاغ تجاري» أو اتصلي على <span class=\"tel\">1900</span>. أرفقي الفاتورة وإثبات الدفع والمحادثات.",l3:"البنك",l3s:"إذا دفعتي ببطاقة وما رجّعوا الفلوس، اسألي البنك عن الاعتراض على العملية.",l4:"المحكمة المختصة",l4s:"للنزاعات والتعويض إذا ما انحلت.",
+alert:"انتبهي: لا تعطين أحد بيانات بطاقتك أو رمز التحقق بحجة «نقدّم البلاغ عنك». البلاغ يكون من القنوات الرسمية بس، ومجاني.",
+foot1:"معلومات توعوية مبسّطة من نظام التجارة الإلكترونية، وليست استشارة قانونية. الأنظمة ممكن تتعدّل، فارجعي للنص الرسمي في <a href=\"https://laws.boe.gov.sa\" target=\"_blank\" rel=\"noopener\">هيئة الخبراء بمجلس الوزراء</a> ولوزارة التجارة. آخر مراجعة: أكتوبر ٢٠٢٦.",
+foot2:"إعداد: ورود عواض · تقنية التجارة الإلكترونية · الكلية التقنية للبنات بعنيزة",
+lang:"English",right:"حقك",notApply:"ما ينطبق إذا",steps:"وش تسوين",basis:"الأساس",msgT:"رسالة جاهزة للمتجر",copy:"نسخ الرسالة",copied:"انتسخت ✓",share:"أرسليها لصديقة",shareMsg:t=>`${t}؟ هنا حقك بالنظام ورسالة جاهزة للمتجر:`,
+ph:{store:"[اسم المتجر]",order:"[رقم الطلب]",date:"[التاريخ]",name:"[اسمك]"},
+w:{step:(a,b)=>`سؤال ${a} من ${b}`,q1:"وش صار معك؟",q1b:"أي واحد بالضبط؟",qDateR:"متى استلمتي المنتج؟",qDateO:"متى طلبتي؟ (أو الموعد اللي وعدوك فيه)",skip:"ما أذكر، كمّلي",next:"التالي",qUse:"استخدمتي المنتج؟",u1:"لا، ما فتحته",u2:"فتحت الكرتون بس",u3:"إيه، استخدمته",back:"رجوع",restart:"موقف ثاني",details:"التفاصيل والرسالة الجاهزة",result:"النتيجة"},
+days:n=>{const a=Number(n).toLocaleString("ar-SA");return n===1?"يوم":n===2?"يومين":(n>=3&&n<=10?a+" أيام":a+" يوم")},
+meterR:(d)=>`مرّ ${d} من ٧`,meterO:(d)=>`مرّ ${d} من ١٥`,
+gauge:{start:"جاوبي على الأسئلة",startS:"كل ما جاوبتي أكثر، صارت النتيجة أدق.",ok:"يبان موثوق",okS:"ما لقينا علامات خطر. ومع كذا احتفظي بالفاتورة وصوّري صفحة الطلب.",warn:"انتبهي",warnS:"فيه علامات تستاهل تتأكدين منها قبل الدفع:",bad:"لا تشترين",badS:"فيه علامات خطر واضحة:",ans:(a,b)=>`جاوبتي ${a} من ${b}`}
+},
+en:{brand:"Know Your Rights",nav1:"Situations",tb1:"Ask",tb3:"Check",tb4:"Deadlines",nav2:"True or false?",nav3:"Check a store",nav4:"Deadline calculator",nav5:"Complaints",eb:"Online shoppers' rights in Saudi Arabia",h1:"What are my <em>rights</em>?",
+lead:"Answer two questions. We'll tell you your rights under Saudi law in plain words, how much time you have left, and give you a ready message for the store.",f1:"days to cancel after delivery",f2:"days of delay before you can cancel",f3:"Ministry of Commerce",stamp:"Your<br>right",
+cTitle:"All situations",cSub:"Open your situation: your right, when it doesn't apply, the steps, and a ready message.",meT:"✎ Fill in your details to complete the message (optional)",fStore:"Store name",fOrder:"Order number",fDate:"Order date",fName:"Your name",search:"Search: late, damaged, invoice, messages…",empty:"No situation matches that. Try another word.",
+mTitle:"True or false?",mSub:"Things people often say. Pick your answer and see.",yes:"True",no:"False",score:(a,b)=>`${a} of ${b} correct`,
+kTitle:"Check a store before you buy",kSub:"Answer about the store you're about to buy from, and we'll tell you if it looks trustworthy.",reset:"Start over",yesB:"Yes",noB:"No",
+tTitle:"Deadline calculator",tSub:"Enter the date and we'll count the days.",t1:"Cancellation and return window",t1l:"Date you received the product",t2:"Late delivery",t2l:"Order date (or the agreed delivery date)",
+hTitle:"If the store doesn't respond",hSub:"In this order. Don't skip a step.",l1:"Write to the store",l1s:"Send a message or email and keep a screenshot. It's your first piece of evidence.",l2:"Report to the Ministry of Commerce",l2s:"Use the \"Balagh Tijari\" app or call <span class=\"tel\">1900</span>. Attach the invoice, proof of payment and your messages.",l3:"Your bank",l3s:"If you paid by card and weren't refunded, ask your bank about disputing the transaction.",l4:"The competent court",l4s:"For disputes and compensation if nothing else works.",
+alert:"Careful: never give anyone your card details or a verification code because they offer to \"file the report for you\". Reports go through official channels only, and they're free.",
+foot1:"Simplified awareness information based on the Saudi E-Commerce Law. It is not legal advice. Laws can change, so check the official text at the <a href=\"https://laws.boe.gov.sa\" target=\"_blank\" rel=\"noopener\">Bureau of Experts</a> and the Ministry of Commerce. Last reviewed: October 2026.",
+foot2:"Made by Worood Awad · E-Commerce Technology · Unaizah Technical College for Girls",
+lang:"العربية",right:"Your right",notApply:"Doesn't apply if",steps:"What to do",basis:"Legal basis",msgT:"Ready message for the store",copy:"Copy message",copied:"Copied ✓",share:"Send to a friend",shareMsg:t=>`${t}? Here are your rights and a ready message for the store:`,
+ph:{store:"[store name]",order:"[order no.]",date:"[date]",name:"[your name]"},
+w:{step:(a,b)=>`Question ${a} of ${b}`,q1:"What happened?",q1b:"Which one exactly?",qDateR:"When did you receive the product?",qDateO:"When did you order? (or the delivery date you were promised)",skip:"I don't remember, continue",next:"Next",qUse:"Have you used the product?",u1:"No, I haven't opened it",u2:"I only opened the box",u3:"Yes, I used it",back:"Back",restart:"Another situation",details:"Details and ready message",result:"Result"},
+days:n=>n===1?"1 day":n+" days",
+meterR:(d)=>`${d} of 7 days passed`,meterO:(d)=>`${d} of 15 days passed`,
+gauge:{start:"Answer the questions",startS:"The more you answer, the more accurate the result.",ok:"Looks trustworthy",okS:"No warning signs found. Still, keep the invoice and screenshot the order page.",warn:"Be careful",warnS:"Some signs worth checking before you pay:",bad:"Don't buy",badS:"Clear warning signs:",ans:(a,b)=>`${a} of ${b} answered`}
+}};
+
+/* ---------------- situations ---------------- */
+const CASES=[
+{id:"wrong",ic:"≠",date:"r",k:"غلط مختلف غير اللي طلبته وصف مقاس لون wrong different description",
+ ar:{t:"وصلني منتج غير اللي طلبته",s:"غلط في المنتج، أو ما يطابق الوصف والصور",right:"تطلبين المنتج الصحيح أو ترجعينه وتسترجعين فلوسك. الخطأ من المتجر، فاطلبي إنه يتحمل تكلفة الإرجاع.",no:"شرط «المفتوح لا يُرجع» ما ينطبق هنا. هذا الشرط لمن غيّرت رأيها في منتج سليم، مو لمنتج غلط.",steps:["صوّري المنتج أول ما تفتحينه، مع الكرتون والملصق اللي عليه رقم الطلب.","أرسلي للمتجر كتابيًا واحفظي صورة.","ما ردّوا أو رفضوا؟ بلاغ لوزارة التجارة."],law:"نظام التجارة الإلكترونية، المادة ١٣: استثناءات الإلغاء ما تشمل المنتج اللي ما يطابق المواصفات المتفق عليها.",
+  msg:"السلام عليكم،\nأنا {name}، طلبت من {store} طلب رقم {order} بتاريخ {date}، ووصلني منتج مختلف عن المطلوب ولا يطابق الوصف المعروض.\nأطلب تسليمي المنتج الصحيح أو استرجاع كامل المبلغ، مع تحمّل المتجر تكلفة الإرجاع لأن الخطأ من المتجر.\nمرفق صور المنتج والطلب. أرجو الرد خلال يومين عمل، وإلا سأقدّم بلاغًا لوزارة التجارة.\nشكرًا لكم."},
+ en:{t:"I received the wrong product",s:"Wrong item, or it doesn't match the description and photos",right:"Ask for the correct product, or return it for a full refund. The mistake is the store's, so ask them to cover the return cost.",no:"\"Opened items can't be returned\" doesn't apply here. That rule is for changing your mind about a correct product, not for a wrong one.",steps:["Photograph the product as soon as you open it, with the box and the label showing the order number.","Write to the store and keep a screenshot.","No reply or refused? Report it to the Ministry of Commerce."],law:"E-Commerce Law, Article 13: the exceptions to cancellation don't cover products that don't match the agreed specifications.",
+  msg:"Hello,\nI'm {name}. I ordered from {store}, order no. {order} on {date}, and received a product that is different from what I ordered and does not match the listing.\nI request the correct product or a full refund, with the store covering the return cost since the error was the store's.\nPhotos of the product and order are attached. Please reply within two working days, otherwise I will file a report with the Ministry of Commerce.\nThank you."}},
+{id:"damaged",ic:"✕",date:"r",k:"تالف مكسور عيب خربان معيب ما يشتغل damaged broken defective",
+ ar:{t:"المنتج وصل تالف أو فيه عيب",s:"مكسور، ما يشتغل، أو فيه عيب مصنعي",right:"تطلبين الاستبدال أو الإصلاح أو استرجاع الفلوس. والعيب ما يدخل في الحالات اللي يُمنع فيها الإرجاع.",no:"إذا كان العيب بسبب سوء استخدامك أنتِ للمنتج.",steps:["صوّري العيب فيديو وصور فور الاستلام.","تواصلي مع المتجر كتابيًا بأسرع وقت.","احتفظي بالفاتورة وشهادة الضمان إن وجدت.","ما انحلت؟ بلاغ لوزارة التجارة."],law:"نظام التجارة الإلكترونية، المادة ١٣: العيب ما يُستثنى إلا إذا كان بسبب سوء استخدام المستهلك.",
+  msg:"السلام عليكم،\nأنا {name}، استلمت طلبي رقم {order} من {store} (تاريخ الطلب {date})، ووصل المنتج تالفًا / فيه عيب.\nأطلب استبداله بمنتج سليم أو استرجاع المبلغ كاملًا، مع تحمّل المتجر تكلفة الشحن.\nمرفق صور وفيديو يوضح العيب. أرجو الرد خلال يومين عمل.\nشكرًا لكم."},
+ en:{t:"The product arrived damaged or faulty",s:"Broken, not working, or a manufacturing defect",right:"Ask for a replacement, repair or refund. A defect is not one of the cases where returns are blocked.",no:"The defect was caused by your own misuse of the product.",steps:["Record a video and photos of the defect when you receive it.","Write to the store as soon as possible.","Keep the invoice and any warranty card.","Not solved? Report to the Ministry of Commerce."],law:"E-Commerce Law, Article 13: a defect is only excluded when caused by the consumer's misuse.",
+  msg:"Hello,\nI'm {name}. I received my order no. {order} from {store} (ordered on {date}), and the product arrived damaged / defective.\nI request a replacement or a full refund, with the store covering shipping.\nPhotos and a video of the defect are attached. Please reply within two working days.\nThank you."}},
+{id:"change",ic:"٧",date:"r",use:true,k:"غيرت رأيي ما عجبني إرجاع ارجاع استرجاع سبعة 7 أيام change mind return 7 days",
+ ar:{t:"غيّرت رأيي وأبي أرجّع",s:"المنتج سليم وما استخدمته",right:"تقدرين تلغين وترجعين المنتج خلال ٧ أيام من استلامه، بشرط ما تكونين استخدمتيه. تكلفة الإرجاع عليك، إلا إذا سياسة المتجر تقول غير كذا.",no:"المنتجات المصنوعة حسب طلبك، والكتب والمجلات، والبرامج والتسجيلات بعد فتحها أو تحميلها، وخدمات السكن والنقل والأكل. والعطور ومستحضرات العناية المفتوحة غالبًا ما تُرجع لأسباب صحية.",steps:["لا تستخدمين المنتج.","أرسلي طلب الإلغاء كتابيًا قبل ما تخلص الـ٧ أيام.","احفظي إثبات الإرسال وإيصال الشحن."],law:"نظام التجارة الإلكترونية، المادة ١٣.",
+  msg:"السلام عليكم،\nأنا {name}، أرغب في إلغاء طلبي رقم {order} من {store} (تاريخ الطلب {date}) وإرجاع المنتج، خلال ٧ أيام من استلامه ودون استخدامه، وفق المادة ١٣ من نظام التجارة الإلكترونية.\nأرجو تزويدي بطريقة الإرجاع وموعد استرداد المبلغ.\nشكرًا لكم."},
+ en:{t:"I changed my mind and want to return it",s:"The product is fine and unused",right:"You can cancel and return it within 7 days of receiving it, as long as you haven't used it. You pay the return cost unless the store's policy says otherwise.",no:"Made-to-order items, books and magazines, software or recordings once opened or downloaded, and accommodation, transport or food services. Opened perfumes and personal-care products are usually not returnable for hygiene reasons.",steps:["Don't use the product.","Send your cancellation in writing before the 7 days end.","Keep proof of sending and the shipping receipt."],law:"E-Commerce Law, Article 13.",
+  msg:"Hello,\nI'm {name}. I wish to cancel my order no. {order} from {store} (ordered on {date}) and return the product, within 7 days of receiving it and without using it, under Article 13 of the E-Commerce Law.\nPlease send me the return instructions and the refund date.\nThank you."}},
+{id:"late",ic:"⏱",date:"o",k:"تأخر التوصيل ما وصل الشحن متأخر خمسة عشر 15 يوم late delivery delay",
+ ar:{t:"الطلب تأخّر وما وصل",s:"عدّى الموعد ولا وصلني شي",right:"إذا تأخر التوصيل أكثر من ١٥ يوم من تاريخ الطلب، أو عن الموعد المتفق عليه، تقدرين تلغين وتسترجعين فلوسك كاملة، ومعها التكاليف اللي دفعتيها بسبب التأخير. والمتجر لازم ينبّهك مسبقًا إذا فيه تأخير متوقع.",no:"التأخير بسبب قوة قاهرة، يعني ظرف خارج عن إرادة الجميع.",steps:["احسبي الأيام من تاريخ الطلب أو الموعد المتفق عليه.","أرسلي للمتجر إشعار إلغاء مكتوب واطلبي استرداد المبلغ.","ما ردّوا؟ بلاغ لوزارة التجارة، وتواصلي مع البنك."],law:"نظام التجارة الإلكترونية، المادة ١٤.",
+  msg:"السلام عليكم،\nأنا {name}، طلبت من {store} طلب رقم {order} بتاريخ {date}، ولم يصلني حتى الآن رغم مرور أكثر من ١٥ يومًا.\nأبلغكم بإلغاء الطلب واسترداد كامل المبلغ وفق المادة ١٤ من نظام التجارة الإلكترونية.\nأرجو تأكيد الإلغاء وموعد إعادة المبلغ خلال يومين عمل، وإلا سأقدّم بلاغًا لوزارة التجارة.\nشكرًا لكم."},
+ en:{t:"My order is late and hasn't arrived",s:"The date passed and nothing came",right:"If delivery is more than 15 days late from the order date, or past the agreed date, you can cancel and get a full refund plus costs caused by the delay. The store must warn you in advance about expected delays.",no:"The delay is caused by force majeure, an event outside everyone's control.",steps:["Count the days from the order date or the agreed date.","Send the store a written cancellation and ask for a refund.","No reply? Report to the Ministry of Commerce and contact your bank."],law:"E-Commerce Law, Article 14.",
+  msg:"Hello,\nI'm {name}. I ordered from {store}, order no. {order} on {date}, and it has still not arrived after more than 15 days.\nI hereby cancel the order and request a full refund under Article 14 of the E-Commerce Law.\nPlease confirm the cancellation and the refund date within two working days, otherwise I will report this to the Ministry of Commerce.\nThank you."}},
+{id:"refund",ic:"﷼",k:"ما رجعوا فلوسي المبلغ استرداد رفض refund money back",
+ ar:{t:"ألغيت الطلب وما رجّعوا فلوسي",s:"يماطلون أو رفضوا يرجعون المبلغ",right:"إذا إلغاؤك نظامي (خلال ٧ أيام، أو بسبب تأخير، أو منتج غلط)، المتجر ملزم يرجّع المبلغ. والمماطلة مخالفة تعاقب عليها وزارة التجارة.",steps:["اجمعي الأدلة: الفاتورة، وإثبات الدفع، وإثبات الإلغاء والإرجاع، والمحادثات.","أرسلي تذكير أخير مكتوب.","بلاغ لوزارة التجارة، وتواصلي مع البنك.","إذا استمر النزاع: المحكمة المختصة."],law:"العقوبات في نظام التجارة الإلكترونية تشمل غرامة تصل إلى مليون ريال، وحجب المتجر أو إغلاقه.",
+  msg:"السلام عليكم،\nأنا {name}، ألغيت طلبي رقم {order} من {store} (تاريخ الطلب {date}) وفق النظام، ولم يُعَد لي المبلغ حتى الآن.\nهذا تذكير أخير بإعادة المبلغ كاملًا. في حال عدم إعادته خلال يومين عمل سأقدّم بلاغًا رسميًا لوزارة التجارة.\nشكرًا لكم."},
+ en:{t:"I cancelled and they didn't refund me",s:"They're stalling or refused to refund",right:"If your cancellation was lawful (within 7 days, for a delay, or a wrong product), the store must refund you. Stalling is a violation the Ministry of Commerce penalises.",steps:["Gather evidence: invoice, proof of payment, proof of cancellation and return, and messages.","Send a final written reminder.","Report to the Ministry of Commerce and contact your bank.","If the dispute continues: the competent court."],law:"Penalties under the E-Commerce Law include fines of up to one million riyals and blocking or closing the store.",
+  msg:"Hello,\nI'm {name}. I lawfully cancelled my order no. {order} from {store} (ordered on {date}) and have not been refunded.\nThis is a final reminder to refund the full amount. If it is not refunded within two working days, I will file an official report with the Ministry of Commerce.\nThank you."}},
+{id:"fees",ic:"+",k:"رسوم مخفية السعر زاد شحن ضريبة hidden fees price",
+ ar:{t:"طلعت لي رسوم ما كانت واضحة",s:"السعر زاد عند الدفع، أو رسوم شحن مخفية",right:"لازم المتجر يوضح لك قبل ما تشترين السعر الكامل مع كل الرسوم والضرائب وتكلفة التوصيل، وطريقة الدفع والتوصيل، والضمان إن وجد.",steps:["صوّري صفحة المنتج والسعر قبل الدفع، وصفحة الدفع.","اطلبي إلغاء الرسوم غير المعلنة أو إلغاء الطلب.","ما تجاوبوا؟ بلاغ لوزارة التجارة."],law:"نظام التجارة الإلكترونية، المادة ٧.",
+  msg:"السلام عليكم،\nأنا {name}، في طلبي رقم {order} من {store} (بتاريخ {date}) أُضيفت رسوم لم تكن معلنة قبل الشراء.\nوفق المادة ٧ من نظام التجارة الإلكترونية يجب الإفصاح عن السعر الإجمالي شاملًا كل الرسوم وتكلفة التوصيل قبل التعاقد.\nأطلب إلغاء الرسوم غير المعلنة أو إلغاء الطلب واسترداد المبلغ.\nشكرًا لكم."},
+ en:{t:"I was charged fees that weren't shown",s:"The price went up at checkout, or hidden shipping fees",right:"Before you buy, the store must show the full price with all fees, taxes and delivery costs, plus payment and delivery terms and any warranty.",steps:["Screenshot the product page and price before paying, and the checkout page.","Ask the store to remove the undisclosed fees or cancel the order.","No response? Report to the Ministry of Commerce."],law:"E-Commerce Law, Article 7.",
+  msg:"Hello,\nI'm {name}. On my order no. {order} from {store} (placed on {date}) fees were added that were not disclosed before purchase.\nUnder Article 7 of the E-Commerce Law the total price including all fees and delivery must be disclosed before the contract.\nI request removal of the undisclosed fees or cancellation of the order with a refund.\nThank you."}},
+{id:"invoice",ic:"▤",k:"فاتورة ما عطوني فاتورة invoice receipt",
+ ar:{t:"ما أعطوني فاتورة",s:"اشتريت وما وصلتني فاتورة",right:"بعد الشراء لازم يعطيك المتجر فاتورة فيها السعر، وتاريخ التسليم، ومكانه. والفاتورة أهم دليل لك لو احتجتي ترجعين أو تشتكين.",steps:["اطلبي الفاتورة كتابيًا.","ما أرسلوها؟ هذي مخالفة تقدرين تبلّغين عنها."],law:"نظام التجارة الإلكترونية، المادة ٨.",
+  msg:"السلام عليكم،\nأنا {name}، أرجو تزويدي بفاتورة طلبي رقم {order} من {store} بتاريخ {date}، موضحًا فيها السعر وتاريخ ومكان التسليم، وفق المادة ٨ من نظام التجارة الإلكترونية.\nشكرًا لكم."},
+ en:{t:"They didn't give me an invoice",s:"I bought something and got no invoice",right:"After purchase the store must give you an invoice showing the price, delivery date and place. It's your most important evidence if you need to return or complain.",steps:["Ask for the invoice in writing.","Still nothing? That's a violation you can report."],law:"E-Commerce Law, Article 8.",
+  msg:"Hello,\nI'm {name}. Please send me the invoice for my order no. {order} from {store} dated {date}, showing the price and the delivery date and place, as required by Article 8 of the E-Commerce Law.\nThank you."}},
+{id:"data",ic:"@",k:"رسائل إعلانات بيانات خصوصية رقمي واتساب بث spam messages data privacy",
+ ar:{t:"يرسلون لي إعلانات ما وافقت عليها",s:"أو استخدموا بياناتي ورقمي بدون إذني",right:"المتجر يحفظ بياناتك بقدر ما يحتاج الطلب بس، ولازم يحميها، وما يحق له يستخدمها أو يشاركها بدون موافقتك. وتقدرين تطلبين حذفها.",steps:["صوّري الرسائل اللي وصلتك.","اطلبي إيقاف الرسائل وحذف بياناتك.","ما وقفوا؟ بلاغ لوزارة التجارة."],law:"نظام التجارة الإلكترونية، المادة ٥، ونظام حماية البيانات الشخصية.",
+  msg:"السلام عليكم،\nأنا {name}، عميلة لدى {store} (طلب رقم {order})، وتصلني رسائل تسويقية لم أوافق عليها.\nأطلب إيقاف الرسائل التسويقية فورًا وحذف بياناتي غير اللازمة، وفق المادة ٥ من نظام التجارة الإلكترونية ونظام حماية البيانات الشخصية.\nشكرًا لكم."},
+ en:{t:"They send me ads I never agreed to",s:"Or used my data or number without permission",right:"A store may keep your data only as long as the order needs, must protect it, and may not use or share it without your consent. You can ask for it to be deleted.",steps:["Screenshot the messages you received.","Ask them to stop the messages and delete your data.","Didn't stop? Report to the Ministry of Commerce."],law:"E-Commerce Law, Article 5, and the Personal Data Protection Law.",
+  msg:"Hello,\nI'm {name}, a customer of {store} (order no. {order}), and I keep receiving marketing messages I never agreed to.\nI request that you stop all marketing messages immediately and delete my unnecessary data, under Article 5 of the E-Commerce Law and the Personal Data Protection Law.\nThank you."}},
+{id:"ad",ic:"!",k:"إعلان مضلل خصم وهمي كذب مبالغة تقييمات misleading ad fake discount",
+ ar:{t:"الإعلان كان مضلل",s:"خصم وهمي، أو وصف مبالغ فيه، أو كلام غير صحيح",right:"الإعلان الإلكتروني لازم يكون صادق وما يضلل. وإذا المنتج ما طابق الوصف المعلن، لك حق الإرجاع. وتقدرين تبلّغين عن الإعلان نفسه، والوزارة تقدر تلزم المتجر يشيله.",steps:["صوّري الإعلان بسرعة قبل ما ينحذف.","بلّغي وزارة التجارة وأرفقي الصور."],law:"نظام التجارة الإلكترونية: أحكام الإعلان الإلكتروني، والمادة ١٢ عن إلزام المتجر بإزالة الإعلان المخالف."},
+ en:{t:"The ad was misleading",s:"A fake discount, exaggerated claims, or false information",right:"Online ads must be truthful and not misleading. If the product doesn't match what was advertised, you can return it. You can also report the ad itself, and the Ministry can order the store to remove it.",steps:["Screenshot the ad quickly before it's deleted.","Report it to the Ministry of Commerce with the screenshots."],law:"E-Commerce Law: electronic advertising rules, and Article 12 on ordering removal of a violating ad."}}
+];
+
+
+/* ---------------- store checker ---------------- */
+const CHECKS=[
+{risk:"no",sev:1,ar:{q:"فيه رقم سجل تجاري أو وثيقة عمل حر أو شهادة توثيق ظاهرة في المتجر؟",f:"ما فيه سجل تجاري أو توثيق ظاهر"},en:{q:"Does the store show a commercial registration, freelance certificate or verification certificate?",f:"No visible registration or verification"}},
+{risk:"no",sev:1,ar:{q:"فيه عنوان ووسيلة تواصل واضحة؟",f:"ما فيه عنوان أو وسيلة تواصل واضحة"},en:{q:"Is there a clear address and contact method?",f:"No clear address or contact method"}},
+{risk:"no",sev:1,ar:{q:"سياسة الاسترجاع مكتوبة قبل الدفع؟",f:"سياسة الاسترجاع مو واضحة"},en:{q:"Is the return policy written before payment?",f:"Return policy isn't clear"}},
+{risk:"no",sev:1,ar:{q:"السعر النهائي مع الشحن ظاهر قبل الدفع؟",f:"السعر النهائي مو واضح قبل الدفع"},en:{q:"Is the final price with shipping shown before payment?",f:"Final price isn't clear before payment"}},
+{risk:"yes",sev:2,ar:{q:"يطلب منك تحويل لحساب بنكي شخصي؟",f:"يطلب تحويل لحساب شخصي"},en:{q:"Does it ask you to transfer to a personal bank account?",f:"Asks for transfer to a personal account"}},
+{risk:"yes",sev:1,ar:{q:"الأسعار أرخص من كل مكان بشكل مو طبيعي؟",f:"أسعار رخيصة بشكل مو طبيعي"},en:{q:"Are prices unusually cheaper than everywhere else?",f:"Unrealistically low prices"}},
+{risk:"yes",sev:1,ar:{q:"يستعجلك: «العرض ينتهي خلال دقائق» أو «باقي قطعة وحدة»؟",f:"يضغط عليك بالاستعجال"},en:{q:"Does it rush you: \"offer ends in minutes\" or \"only one left\"?",f:"Pressure tactics to rush you"}},
+{risk:"yes",sev:3,ar:{q:"طلب منك رمز التحقق اللي يوصلك على الجوال؟",f:"طلب رمز التحقق، وهذا احتيال"},en:{q:"Did it ask for the verification code sent to your phone?",f:"Asked for your verification code: that's fraud"}}
+];
+
+/* ---------------- helpers ---------------- */
+const t=k=>T[L][k];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const nf=n=>L==="ar"?Number(n).toLocaleString("ar-SA"):String(n);
+const daysSince=v=>{if(!v)return null;const d=new Date(v+"T00:00");if(isNaN(d))return null;const n=new Date();n.setHours(0,0,0,0);return Math.round((n-d)/864e5)};
+function toast(m){const e=$("toast");e.textContent=m;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),1800)}
+function copyText(txt,btn){const done=()=>toast(t("copied"));if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>sel(btn))}else sel(btn)}
+function sel(btn){const m=btn.closest(".col").querySelector(".msg");if(!m)return;const r=document.createRange();r.selectNodeContents(m);const s=getSelection();s.removeAllRanges();s.addRange(r);toast(L==="ar"?"حدّدتها، انسخيها":"Selected, copy it")}
+function waLink(c){const d=c[L];return "https://wa.me/?text="+encodeURIComponent(t("shareMsg")(d.t)+"\n"+SITE+"#"+c.id)}
+function meter(d,max,lab,ok){const pct=Math.min(100,Math.max(0,d/max*100));return `<div class="meter"><div class="tr"><div class="fl${d>max&&!ok?" over":""}" style="width:${pct}%"></div></div><div class="lb"><span>${lab}</span><span>${nf(Math.max(0,d))}/${nf(max)}</span></div></div>`}
+
+/* ---------------- render cases ---------------- */
+const F={store:$("f-store"),order:$("f-order"),date:$("f-date"),name:$("f-name")};
+function fval(k){const v=(F[k].value||"").trim();if(!v)return null;if(k==="date"){try{return new Date(v+"T00:00").toLocaleDateString(L==="ar"?"ar-SA-u-ca-gregory":"en-GB",{year:"numeric",month:"long",day:"numeric"})}catch(e){return v}}return v}
+function fillMsg(tpl){return esc(tpl).replace(/\{(store|order|date|name)\}/g,(_,k)=>{const v=fval(k);return v?"<mark>"+esc(v)+"</mark>":`<span class="ph">${esc(t("ph")[k])}</span>`})}
+function parkForm(){$("formPark").appendChild($("msgForm"))}
+function placeForm(d){const sl=d&&d.querySelector(".slot");if(sl)sl.appendChild($("msgForm"));else parkForm()}
+function renderCases(){parkForm();const open=[...document.querySelectorAll("details.case[open]")].map(d=>d.id);
+ $("caseList").innerHTML=CASES.map(c=>{const d=c[L];return `<details class="case" id="${c.id}" data-k="${esc(c.k+" "+d.t+" "+d.s)}">
+ <summary><span class="cic" aria-hidden="true">${c.ic}</span><span><h3>${esc(d.t)}</h3><small>${esc(d.s)}</small></span><span class="chev" aria-hidden="true">⌄</span></summary>
+ <div class="cb"><div class="col">
+  <div class="right"><span class="lab">${t("right")}</span><p>${esc(d.right)}</p></div>
+  ${d.no?`<div class="no"><span class="lab" style="color:inherit">${t("notApply")}</span>${esc(d.no)}</div>`:""}
+  <div><span class="lab">${t("steps")}</span><ol class="do">${d.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>
+  <div class="law"><b>${t("basis")}:</b> ${esc(d.law)}</div>
+ </div><div class="col">
+  ${d.msg?`<div class="slot"></div><span class="lab">${t("msgT")}</span><div class="msg" data-c="${c.id}">${fillMsg(d.msg)}</div>
+  <div class="row" style="margin-top:0"><button class="btn sm" type="button" data-copy="${c.id}">${t("copy")}</button><a class="btn wa sm" href="${waLink(c)}" target="_blank" rel="noopener">${t("share")}</a></div>`
+  :`<div class="row" style="margin-top:0"><a class="btn wa sm" href="${waLink(c)}" target="_blank" rel="noopener">${t("share")}</a></div>`}
+ </div></div></details>`}).join("");
+ open.slice(0,1).forEach(id=>{const e=$(id);if(e){e.open=true;placeForm(e)}});
+ document.querySelectorAll("details.case").forEach(d=>d.addEventListener("toggle",()=>{if(d.open){document.querySelectorAll("details.case[open]").forEach(o=>{if(o!==d)o.open=false});placeForm(d)}else if(d.contains($("msgForm")))parkForm()}));
+ document.querySelectorAll("[data-copy]").forEach(b=>b.onclick=()=>{const m=document.querySelector(`.msg[data-c="${b.dataset.copy}"]`);copyText(m.innerText,b)});
+ filter();}
+function refreshMsgs(){document.querySelectorAll(".msg[data-c]").forEach(m=>{const c=CASES.find(x=>x.id===m.dataset.c);m.innerHTML=fillMsg(c[L].msg)})}
+Object.values(F).forEach(i=>i.addEventListener("input",refreshMsgs));
+const norm=s=>s.replace(/[أإآ]/g,"ا").replace(/ة/g,"ه").replace(/ى/g,"ي").toLowerCase();
+function filter(){const q=norm($("q").value.trim());let n=0;document.querySelectorAll("details.case").forEach(d=>{const show=!q||q.split(/\s+/).every(w=>norm(d.dataset.k).includes(w));d.hidden=!show;if(show)n++});$("empty").hidden=n>0}
+$("q").addEventListener("input",filter);
+function openCase(id){const d=$(id);if(!d)return;d.open=true;d.hidden=false;setTimeout(()=>d.scrollIntoView({behavior:"smooth",block:"start"}),50)}
+
+/* ---------------- wizard ---------------- */
+const GROUPS=[{id:"product",ic:"▣",ids:["wrong","damaged","change"],ar:{t:"مشكلة في المنتج",s:"غلط، تالف، أو غيّرت رأيي"},en:{t:"A problem with the product",s:"Wrong, damaged, or I changed my mind"}},
+{id:"money",ic:"﷼",ids:["late","refund","fees"],ar:{t:"التوصيل والفلوس",s:"تأخر، ما رجّعوا المبلغ، أو رسوم"},en:{t:"Delivery and money",s:"Late, no refund, or extra fees"}},
+{id:"other",ic:"▤",ids:["invoice","data","ad"],ar:{t:"الفاتورة والبيانات والإعلان",s:"ما في فاتورة، رسائل مزعجة، أو إعلان مضلل"},en:{t:"Invoice, data and ads",s:"No invoice, unwanted messages, or a misleading ad"}}];
+const W={step:1,g:null,c:null,date:"",use:null};
+function wizSteps(){const c=W.c;let n=2;if(c&&c.date)n++;if(c&&c.use)n++;return n+1}
+function stepIndex(){let i=1;if(W.step==="case")i=2;if(W.step==="date")i=3;if(W.step==="use")i=W.c.date?4:3;if(W.step==="res")i=wizSteps();return i}
+function renderWiz(){const w=T[L].w,el=$("wiz");const total=W.c?wizSteps():4,cur=stepIndex();
+ const dots=`<div class="dots">${Array.from({length:total},(_,i)=>`<i class="${i<cur?"on":""}"></i>`).join("")}</div>`;
+ const bar=`<div class="bar"><span>${W.step==="res"?w.result:w.step(nf(cur),nf(total))}</span>${dots}</div>`;
+ let h="";
+ if(W.step===1){h=`<h2>${w.q1}</h2><div class="opts one">${GROUPS.map(g=>`<button class="opt" type="button" data-grp="${g.id}"><span class="ic" aria-hidden="true">${g.ic}</span><span><b>${esc(g[L].t)}</b><small>${esc(g[L].s)}</small></span></button>`).join("")}</div>`}
+ else if(W.step==="case"){h=`<h2>${w.q1b}</h2><div class="opts one">${W.g.ids.map(id=>CASES.find(c=>c.id===id)).map(c=>`<button class="opt" type="button" data-pick="${c.id}"><span class="ic" aria-hidden="true">${c.ic}</span><span><b>${esc(c[L].t)}</b><small>${esc(c[L].s)}</small></span></button>`).join("")}</div><div class="row"><button class="btn ghost" type="button" id="w-back">${w.back}</button></div>`}
+ else if(W.step==="date"){h=`<h2>${W.c.date==="r"?w.qDateR:w.qDateO}</h2><input type="date" id="w-date" value="${W.date}" aria-label="${W.c.date==="r"?w.qDateR:w.qDateO}"><div class="row"><button class="btn" type="button" id="w-next">${w.next}</button><button class="btn ghost" type="button" id="w-skip">${w.skip}</button><button class="btn ghost" type="button" id="w-back">${w.back}</button></div>`}
+ else if(W.step==="use"){h=`<h2>${w.qUse}</h2><div class="opts" style="grid-template-columns:1fr">${[["no",w.u1,"✓"],["box",w.u2,"▢"],["used",w.u3,"✕"]].map(u=>`<button class="opt" type="button" data-use="${u[0]}"><span class="ic">${u[2]}</span><span>${u[1]}</span></button>`).join("")}</div><div class="row"><button class="btn ghost" type="button" id="w-back">${w.back}</button></div>`}
+ else{const v=verdict();h=`<div class="verdict v-${v.tone}"><h3>${v.title}</h3><p style="margin:0">${v.text}</p>${v.meter||""}</div><div class="row"><button class="btn" type="button" id="w-det">${w.details}</button><a class="btn wa" href="${waLink(W.c)}" target="_blank" rel="noopener">${t("share")}</a><button class="btn ghost" type="button" id="w-re">${w.restart}</button></div>`}
+ el.innerHTML=bar+`<div class="anim">${h}</div>`;
+ el.querySelectorAll("[data-grp]").forEach(b=>b.onclick=()=>{W.g=GROUPS.find(g=>g.id===b.dataset.grp);W.step="case";renderWiz()});
+ el.querySelectorAll("[data-pick]").forEach(b=>b.onclick=()=>{W.c=CASES.find(c=>c.id===b.dataset.pick);W.date="";W.use=null;W.step=W.c.date?"date":W.c.use?"use":"res";renderWiz()});
+ el.querySelectorAll("[data-use]").forEach(b=>b.onclick=()=>{W.use=b.dataset.use;W.step="res";renderWiz()});
+ const nx=$("w-next");if(nx)nx.onclick=()=>{W.date=$("w-date").value;W.step=W.c.use?"use":"res";renderWiz()};
+ const sk=$("w-skip");if(sk)sk.onclick=()=>{W.date="";W.step=W.c.use?"use":"res";renderWiz()};
+ const bk=$("w-back");if(bk)bk.onclick=()=>{W.step=W.step==="case"?1:(W.step==="use"&&W.c.date)?"date":"case";renderWiz()};
+ const de=$("w-det");if(de)de.onclick=()=>{if(W.date&&W.c.date==="o"&&!F.date.value){F.date.value=W.date;refreshMsgs()}openCase(W.c.id)};
+ const re=$("w-re");if(re)re.onclick=()=>{W.step=1;W.c=null;W.g=null;renderWiz()};
+}
+function verdict(){const c=W.c,d=daysSince(W.date),ar=L==="ar",D=T[L].days;let tone="ok",title,text,m="";
+ if(c.id==="change"){
+  if(W.use==="used"){tone="bad";title=ar?"غالبًا ما يحق لك الإلغاء":"You probably can't cancel";text=ar?"شرط الإلغاء إنك ما تكونين استخدمتي المنتج. لكن إذا فيه عيب، اختاري «المنتج وصل تالف».":"The condition is that the product is unused. If it's faulty, choose \"arrived damaged or faulty\" instead."}
+  else{if(d===null){tone=W.use==="box"?"warn":"ok";title=ar?"يحق لك تلغين خلال ٧ أيام":"You can cancel within 7 days";text=ar?"من تاريخ الاستلام، ما دام المنتج ما استُخدم.":"From the delivery date, as long as it's unused."}
+   else if(d<=7){const left=7-d;tone=W.use==="box"?"warn":"ok";title=ar?(left===0?"اليوم آخر يوم لك":`باقي لك ${D(left)}`):(left===0?"Today is your last day":`You have ${D(left)} left`);text=ar?"يحق لك تلغين وترجعين المنتج. أرسلي طلبك كتابيًا اليوم.":"You can cancel and return it. Send your request in writing today."}
+   else{tone="bad";title=ar?"عدّت مهلة الـ٧ أيام":"The 7-day window has passed";text=ar?`مرّ ${D(d)} على الاستلام. راجعي سياسة المتجر، بعض المتاجر تعطي مدة أطول.`:`It's been ${D(d)} since delivery. Check the store's policy; some stores allow longer.`}
+   if(W.use==="box")text+=ar?" فتح الكرتون للمعاينة غالبًا ما يلغي حقك، إلا في منتجات مثل العطور ومستحضرات العناية.":" Opening the box to inspect usually doesn't cancel your right, except for items like perfume and personal care."
+   if(d!==null)m=meter(d,7,T[L].meterR(nf(d)))}}
+ else if(c.id==="late"){
+  if(d===null){tone="warn";title=ar?"المهلة ١٥ يوم":"The limit is 15 days";text=ar?"إذا تعدّى التأخير ١٥ يوم من الطلب أو الموعد المتفق عليه، يحق لك تلغين وتسترجعين فلوسك.":"If the delay passes 15 days from the order or the agreed date, you can cancel for a full refund."}
+  else if(d>15){tone="ok";title=ar?"يحق لك تلغين الحين":"You can cancel now";text=ar?`مرّ ${D(d)} على طلبك. ألغي كتابيًا واطلبي استرداد المبلغ كامل.`:`It's been ${D(d)} since you ordered. Cancel in writing and ask for a full refund.`}
+  else{tone="warn";const left=16-d;title=ar?`باقي ${D(left)}`:`${D(left)} to go`;text=ar?"بعدها يحق لك تلغين. وإذا كان فيه موعد توصيل متفق عليه وتعدّاه، يحق لك من بعده.":"After that you can cancel. If an agreed delivery date has already passed, you can cancel from then."}
+  if(d!==null)m=meter(d,15,T[L].meterO(nf(d)),true)}
+ else if(c.id==="wrong"||c.id==="damaged"){title=ar?"حقك ثابت":"You're covered";text=(ar?"المنتج الغلط أو المعيب مو من الاستثناءات. ":"A wrong or faulty product isn't an exception. ")+(c[L].right)+(d!==null&&d>7?(ar?" ولا تتأخرين أكثر في التبليغ.":" Don't wait any longer to report it."):"")}
+ else{title=ar?"هذا حقك":"Here's your right";text=c[L].right}
+ return {tone,title,text,meter:m}}
+
+
+/* ---------------- checker ---------------- */
+let CA={};
+function renderChecks(){$("qList").innerHTML=CHECKS.map((c,i)=>{const a=CA[i];return `<div class="q"><p>${esc(c[L].q)}</p><div class="yn" role="group"><button type="button" data-ck="${i}" data-v="yes" class="${a==="yes"?"on"+(c.risk==="yes"?" risk":""):""}">${t("yesB")}</button><button type="button" data-ck="${i}" data-v="no" class="${a==="no"?"on"+(c.risk==="no"?" risk":""):""}">${t("noB")}</button></div></div>`}).join("");
+ document.querySelectorAll("[data-ck]").forEach(b=>b.onclick=()=>{const i=b.dataset.ck;CA[i]=CA[i]===b.dataset.v?undefined:b.dataset.v;if(CA[i]===undefined)delete CA[i];renderChecks()});
+ const g=T[L].gauge,n=Object.keys(CA).length;const fl=CHECKS.map((c,i)=>CA[i]===c.risk?c:null).filter(Boolean);const sc=fl.reduce((s,c)=>s+c.sev,0);
+ let tone,title,sub;if(!n){tone="";title=g.start;sub=g.startS}else if(sc===0){tone="ok";title=g.ok;sub=g.okS}else if(sc>=3){tone="bad";title=g.bad;sub=g.badS}else{tone="warn";title=g.warn;sub=g.warnS}
+ $("gauge").innerHTML=`<div class="lb" style="font-size:13px;color:var(--mu)">${g.ans(nf(n),nf(CHECKS.length))}</div><div class="big" style="color:var(--${tone||"ink"})">${title}</div><p style="margin:0">${sub}</p>${fl.length?`<ul class="flags">${fl.map(c=>`<li>${esc(c[L].f)}</li>`).join("")}</ul>`:""}`}
+$("kReset").onclick=()=>{CA={};renderChecks()};
+
+/* ---------------- calculator ---------------- */
+function calc(){const D=T[L].days,ar=L==="ar";
+ const r=daysSince($("c-rec").value);let o="";if(r!==null){const left=7-r;o=meter(r,7,T[L].meterR(nf(Math.max(0,r))))+`<div class="res" style="color:var(--${left>=0?"ok":"bad"})">${left>0?(ar?`باقي لك ${D(left)} للإلغاء والإرجاع`:`${D(left)} left to cancel and return`):left===0?(ar?"اليوم آخر يوم":"Today is the last day"):(ar?"عدّت المهلة النظامية. راجعي سياسة المتجر.":"The legal window has passed. Check the store's policy.")}</div>`}$("c-rec-out").innerHTML=o;
+ const d=daysSince($("c-ord").value);o="";if(d!==null){o=meter(d,15,T[L].meterO(nf(Math.max(0,d))),true)+`<div class="res" style="color:var(--${d>15?"ok":"warn"})">${d>15?(ar?"يحق لك تلغين وتسترجعين فلوسك الحين":"You can cancel and get a refund now"):(ar?`باقي ${D(16-d)} ويحق لك تلغين`:`${D(16-d)} until you can cancel`)}</div>`}$("c-ord-out").innerHTML=o}
+$("c-rec").addEventListener("input",calc);$("c-ord").addEventListener("input",calc);
+
+/* ---------------- language ---------------- */
+function applyLang(){const R=document.documentElement;R.lang=L;R.dir=L==="ar"?"rtl":"ltr";document.body.dir=R.dir;document.title=L==="ar"?"وش حقّي؟":"Know Your Rights · Saudi online shopping";
+ document.querySelectorAll("[data-i]").forEach(e=>{const v=T[L][e.dataset.i];if(typeof v==="string")e.textContent=v});
+ document.querySelectorAll("[data-i-html]").forEach(e=>{e.innerHTML=T[L][e.dataset.iHtml]});
+ $("q").placeholder=t("search");$("lang").textContent=t("lang");
+ renderCases();renderWiz();renderChecks();calc();
+ try{localStorage.setItem("haqqi-lang",L)}catch(e){}}
+$("lang").onclick=()=>{L=L==="ar"?"en":"ar";applyLang()};
+applyLang();
+try{const secs=["ask","cases","check","calc","help"].map(id=>document.getElementById(id));const tabs=[...document.querySelectorAll(".tabbar a")];
+ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){tabs.forEach(a=>a.classList.toggle("on",a.dataset.sec===e.target.id))}})},{rootMargin:"-45% 0px -50% 0px"});secs.forEach(s=>s&&io.observe(s))}catch(e){}
+const h=location.hash.slice(1);if(h&&CASES.some(c=>c.id===h))openCase(h);
+})();
+</script>
+</body></html>
