@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="ar" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>وش حقّي؟</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="دليل مبسّط لحقوق المتسوّق أونلاين في السعودية: اعرفي حقك، افحصي المتجر، واحسبي مهلتك، مع رسائل جاهزة للمتجر.">
@@ -45,6 +45,64 @@ nav.links a:hover{background:var(--tint);color:var(--ac)}
 .lang{border:1px solid var(--ln);background:var(--sheet);border-radius:999px;padding:5px 14px;font-weight:700;cursor:pointer;font-size:14px;flex:none}
 @media (max-width:760px){nav.links{display:none}.lang{margin-inline-start:auto}}
 /* hero */
+/* front: banner, featured situations, shortcut tiles, why band */
+.bn{position:relative;margin-block:18px 44px;border-radius:24px;overflow:hidden;background:linear-gradient(110deg,var(--tint) 0%,var(--sand-t) 100%);display:grid;grid-template-columns:1fr 46%;align-items:center;min-height:440px;border:1px solid var(--ln)}
+.bn-txt{position:relative;z-index:2;padding:36px 44px}
+.bn-txt>*{animation:bnRise .9s cubic-bezier(.2,.8,.2,1) both}
+.bn-txt>*:nth-child(2){animation-delay:.15s}.bn-txt>*:nth-child(3){animation-delay:.3s}.bn-txt>*:nth-child(4){animation-delay:.45s}
+.bn h1{font-size:clamp(46px,7.5vw,84px);font-weight:700;letter-spacing:-1px;margin:14px 0 12px;line-height:1.15}
+.bn h1 em{font-style:normal;color:var(--ac)}
+.bn p{font-size:18px;color:var(--mu);max-width:36ch;margin:0 0 22px}
+.bn .btn{padding:13px 28px;font-size:16px;position:relative;overflow:hidden}
+.bn .btn::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);animation:bnShine 3.8s ease-in-out infinite}
+.bn-art{align-self:stretch;display:grid;place-items:center;padding:10px}
+.bn-art svg{width:100%;height:auto;max-height:420px}
+.bn-art .fl1{animation:bnFloat 6s ease-in-out infinite}
+.bn-art .fl2{animation:bnFloat 7s ease-in-out -2s infinite}
+.bn-art .fl3{animation:bnFloat 5s ease-in-out -1s infinite}
+.bn-art .chk{stroke-dasharray:90;stroke-dashoffset:90;animation:bnDraw 4.5s ease-in-out infinite}
+.bn-art .tw{animation:bnTw 2.6s ease-in-out infinite}
+.bn-art .tw2{animation:bnTw 3.2s ease-in-out -1.2s infinite}
+@keyframes bnRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes bnShine{0%,55%{left:-60%}100%{left:130%}}
+@keyframes bnFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes bnDraw{0%,12%{stroke-dashoffset:90}40%,88%{stroke-dashoffset:0}100%{stroke-dashoffset:90}}
+@keyframes bnTw{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+.bn-art .tw,.bn-art .tw2{transform-box:fill-box;transform-origin:center}
+@media (max-width:760px){.bn{grid-template-columns:1fr;min-height:0;margin-block:12px 32px}.bn-art{order:-1;padding:16px 30px 0}.bn-art svg{max-height:250px}.bn-txt{padding:6px 22px 28px;text-align:center}.bn p{margin-inline:auto}.bn .eb{margin-inline:auto}}
+.fr{margin-bottom:44px}
+.fr>h2{font-size:clamp(22px,3.4vw,28px);margin-bottom:16px}
+.feat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.feat{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.fcard{background:var(--sheet);border:1px solid var(--ln);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;text-align:center;cursor:pointer;padding:0;transition:transform .3s ease,box-shadow .3s ease}
+.fcard:hover{transform:translateY(-5px);box-shadow:0 18px 36px -22px rgba(20,40,30,.5)}
+.fcard .pic{aspect-ratio:5/4;display:grid;place-items:center;background:var(--tint)}
+.fcard:nth-child(2) .pic{background:var(--bad-t)}.fcard:nth-child(3) .pic{background:var(--sand-t)}.fcard:nth-child(4) .pic{background:var(--ok-t)}
+.fcard .pic svg{width:58%;height:auto;transition:transform .4s ease}
+.fcard:hover .pic svg{transform:scale(1.08) rotate(-3deg)}
+.fcard .pic .gl{font-family:var(--disp);font-size:54px;font-weight:700;color:var(--ac)}
+.fcard .tx{padding:12px 12px 14px;display:grid;gap:4px;flex:1;align-content:start}
+.fcard b{font-family:var(--disp);font-size:15.5px;line-height:1.4}
+.fcard small{color:var(--mu);font-size:12.5px;line-height:1.5}
+.fcard i{font-style:normal;color:var(--ac);font-weight:700;font-size:13.5px;margin-top:4px}
+.tiles{display:flex;gap:22px;flex-wrap:wrap}
+.tile{display:grid;justify-items:center;gap:8px;text-decoration:none;color:var(--ink);font-weight:700;font-size:13.5px;width:88px;text-align:center;line-height:1.35}
+.tile span.ic{width:74px;height:74px;border-radius:20px;background:var(--sheet);border:1px solid var(--ln);display:grid;place-items:center;color:var(--ac);transition:transform .25s,background .25s,color .25s}
+.tile:hover span.ic{transform:translateY(-4px);background:var(--ac);color:var(--ac-ink)}
+.tile svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:520px){.tiles{gap:8px;justify-content:space-between}.tile{width:62px;font-size:12px}.tile span.ic{width:58px;height:58px;border-radius:16px}.tile svg{width:26px;height:26px}}
+.why{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(120deg,#0f6b55,#0a4f3f);color:#f2fbf7;padding:38px 44px;margin-bottom:10px}
+.why h2{color:#fff;font-size:clamp(22px,3.4vw,28px);margin-bottom:8px}
+.why p{margin:0 0 20px;max-width:58ch;line-height:1.9;color:#dff3ea}
+.why .facts{margin:0;gap:28px}
+.why .facts div{color:#cfe9de}.why .facts b{color:#fff;font-size:34px}
+.why .lf{position:absolute;width:58px;height:70px;background:#fffcf5;opacity:.16;border-radius:6px 6px 0 0;animation:bnFloat 7s ease-in-out infinite}
+.why .lf::after{content:"";position:absolute;inset:auto 0 -8px;height:8px;background:linear-gradient(135deg,#fffcf5 50%,transparent 50%) 0 0/12px 8px repeat-x,linear-gradient(225deg,#fffcf5 50%,transparent 50%) 0 0/12px 8px repeat-x}
+.why .lf:nth-of-type(1){inset-inline-end:6%;top:14%;transform:rotate(12deg)}
+.why .lf:nth-of-type(2){inset-inline-end:17%;bottom:10%;width:40px;height:50px;animation-delay:-2s}
+.why .lf:nth-of-type(3){inset-inline-end:28%;top:-14px;width:34px;height:44px;animation-delay:-4s}
+@media (max-width:760px){.why{padding:28px 22px}.why .lf{opacity:.1}}
+#ask .h-wiz{max-width:760px}
 .hero{padding-block:44px 30px}
 .hero .in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);grid-template-areas:"text wiz" "side wiz";column-gap:40px;row-gap:0;align-items:center}
 .h-text{grid-area:text;align-self:end}.h-side{grid-area:side;align-self:start}.h-wiz{grid-area:wiz}
@@ -181,6 +239,58 @@ footer .in{display:grid;gap:8px}
  .toast{bottom:calc(80px + env(safe-area-inset-bottom,0px))}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ---- soft green theme: clean white-mint page, deep green type, peach as the small accent ---- */
+:root{--paper:#f4fbf7;--sheet:#ffffff;--ink:#1d4d3e;--mu:#6f8f84;--ln:#dceee6;--ac:#2a9473;--ac-ink:#ffffff;--tint:#e3f5ed;
+ --sand:#e0a868;--sand-t:#fdf1e2;--ok:#2a9473;--ok-t:#e3f5ed;--warn:#b7812a;--warn-t:#fdf1dc;--bad:#d2694e;--bad-t:#fde9e2;--r:20px;color-scheme:light}
+body{background:var(--paper);background-image:none}
+h1,h2,h3{color:#1f7a5f}
+.top{background:color-mix(in srgb,var(--paper) 90%,transparent);border-bottom:0}
+.logo{color:#1f7a5f;font-size:22px}
+nav.links a{color:#1f7a5f;font-weight:700}
+.lang{border-color:var(--ln);color:#1f7a5f}
+.sheet{border-radius:var(--r);border-color:var(--ln);box-shadow:0 10px 30px -18px rgba(31,122,95,.35)}
+.sheet::after{display:none}
+details.case{border-color:var(--ln);box-shadow:0 6px 20px -16px rgba(31,122,95,.4)}
+.num-eb{color:var(--sand)}
+.btn{border-radius:14px}
+/* banner */
+.bn{background:linear-gradient(105deg,#d9f1e6 0%,#eaf8f1 48%,#f7fcf9 100%);border:0;min-height:460px;grid-template-columns:1fr 52%}
+.bn::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0 52%,rgba(255,255,255,.55) 52% 60%,transparent 60% 64%,rgba(255,255,255,.45) 64% 74%,transparent 74%);pointer-events:none}
+.bn h1{color:#1f7a5f;font-size:clamp(44px,6.6vw,76px);margin:12px 0 10px}
+.bn h1 em{color:#2a9473}
+.bn p{color:#3f7f6c;font-size:19px}
+.bn .eb{background:#fff;color:#1f7a5f}
+.bn .btn{background:#1f7a5f;box-shadow:0 10px 22px -10px rgba(31,122,95,.7)}
+.bn-art{padding:0}
+.bn-art svg{max-height:460px}
+.leaf{position:absolute;z-index:3;top:-30px;width:20px;height:13px;background:linear-gradient(135deg,#9bdcc0,#4fb391);border-radius:80% 0 80% 0;opacity:.8;pointer-events:none;animation:leafFall linear infinite}
+.leaf:nth-child(1){inset-inline-start:10%;animation-duration:12s}
+.leaf:nth-child(2){inset-inline-start:32%;animation-duration:15s;animation-delay:4s;width:14px;height:9px}
+.leaf:nth-child(3){inset-inline-start:55%;animation-duration:13s;animation-delay:7s}
+.leaf:nth-child(4){inset-inline-start:76%;animation-duration:16s;animation-delay:2s;width:24px;height:15px}
+.leaf:nth-child(5){inset-inline-start:92%;animation-duration:14s;animation-delay:9s;width:15px;height:10px}
+@keyframes leafFall{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(-60px,560px) rotate(320deg)}}
+.bn-art .sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+.bn-art .sway2{transform-box:fill-box;transform-origin:50% 100%;animation:sway 6s ease-in-out -2s infinite}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+@media (max-width:760px){.bn{grid-template-columns:1fr}.bn-art{padding:8px 6px 0}.bn-art svg{max-height:270px}.bn::before{display:none}}
+/* featured + tiles */
+.fr>h2{color:#1f7a5f}
+.fcard{border:0;box-shadow:0 8px 24px -16px rgba(31,122,95,.45);background:#fff}
+.fcard .pic{background:linear-gradient(160deg,#e3f5ed,#f4fbf7)}
+.fcard:nth-child(2) .pic{background:linear-gradient(160deg,#fde9e2,#fff7f3)}
+.fcard:nth-child(3) .pic{background:linear-gradient(160deg,#fdf1e2,#fffaf2)}
+.fcard:nth-child(4) .pic{background:linear-gradient(160deg,#e6f3fb,#f6fbfe)}
+.fcard b{color:#1f7a5f}
+.fcard i{color:#1f7a5f;font-size:14.5px}
+.tile{color:#1f7a5f}
+.tile span.ic{border:0;background:linear-gradient(160deg,#e3f5ed,#f4fbf7);box-shadow:0 6px 16px -12px rgba(31,122,95,.5);color:#1f7a5f}
+.why{background:linear-gradient(120deg,#2f9e7a 0%,#1f7a5f 100%)}
+.why .lf{background:linear-gradient(135deg,#d6f5e6,#8fd3b6);opacity:.9;border-radius:80% 0 80% 0;width:54px;height:36px}
+.why .lf::after{display:none}
+.why .lf:nth-of-type(2){width:70px;height:46px}.why .lf:nth-of-type(3){width:40px;height:26px}
+@media (max-width:760px){.why .lf{opacity:.3}}
 </style>
 </head><body>
 
@@ -191,14 +301,68 @@ footer .in{display:grid;gap:8px}
 </div></header>
 
 <main id="top">
-<section class="hero g" id="ask"><div class="in">
-  <div class="h-text">
-    <span class="eb" data-i="eb">دليل حقوق المتسوّق أونلاين في السعودية</span>
-    <h1 data-i-html="h1">وش <em>حقّي</em>؟</h1>
-    <p class="lead" data-i="lead">جاوبي على سؤالين، ونقولك حقك بالنظام بكلام بسيط، وكم باقي لك من المهلة، ورسالة جاهزة ترسلينها للمتجر.</p>
+<div class="g"><div class="in">
+  <div class="bn">
+    <i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i>
+    <div class="bn-txt">
+      <span class="eb" data-i="eb">دليل حقوق المتسوّق أونلاين في السعودية</span>
+      <h1 data-i-html="h1">وش <em>حقّي</em>؟</h1>
+      <p data-i="bLead">حقك بالنظام بكلام بسيط، مع رسالة جاهزة ترسلينها للمتجر.</p>
+      <a class="btn" href="#ask" data-i="bCta">اعرفي حقك الآن</a>
+    </div>
+    <div class="bn-art" aria-hidden="true"><svg viewBox="0 0 560 460" role="img" aria-label="">
+      <defs>
+        <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3fb08a"/><stop offset="1" stop-color="#1f7a5f"/></linearGradient>
+        <linearGradient id="bgB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbd9bf"/><stop offset="1" stop-color="#f0a97c"/></linearGradient>
+        <linearGradient id="bgC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf6f0"/></linearGradient>
+        <linearGradient id="bgL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fd3b6"/><stop offset="1" stop-color="#3a9c7b"/></linearGradient>
+      </defs>
+      <ellipse cx="290" cy="418" rx="230" ry="18" fill="#1f7a5f" opacity=".1"/>
+      <g class="sway"><path d="M70 410 C60 330 78 280 96 240" stroke="#3a9c7b" stroke-width="5" fill="none"/><path d="M96 240 c-46 -8 -62 -50 -50 -84 c40 6 62 40 50 84z" fill="url(#bgL)"/><path d="M84 300 c-48 6 -72 -24 -72 -58 c38 -8 70 16 72 58z" fill="#8fd3b6"/><path d="M78 348 c40 -22 76 -8 88 22 c-34 20 -72 12 -88 -22z" fill="url(#bgL)"/></g>
+      <g class="fl2"><rect x="196" y="56" width="176" height="330" rx="26" fill="#17463a"/><rect x="204" y="64" width="160" height="314" rx="20" fill="url(#bgC)"/><rect x="254" y="72" width="60" height="10" rx="5" fill="#17463a"/>
+        <rect x="218" y="96" width="132" height="34" rx="10" fill="#e3f5ed"/><rect x="228" y="108" width="62" height="9" rx="4.5" fill="#2a9473"/><circle cx="334" cy="113" r="9" fill="#2a9473"/>
+        <rect x="218" y="142" width="62" height="74" rx="10" fill="#fde9e2"/><rect x="288" y="142" width="62" height="74" rx="10" fill="#fdf1e2"/>
+        <rect x="230" y="154" width="38" height="34" rx="6" fill="url(#bgB)"/><circle cx="319" cy="171" r="17" fill="#e0a868"/>
+        <rect x="226" y="198" width="36" height="6" rx="3" fill="#d9a48b"/><rect x="296" y="198" width="36" height="6" rx="3" fill="#d9b587"/>
+        <rect x="218" y="228" width="132" height="54" rx="12" fill="#fff" stroke="#dceee6" stroke-width="2"/><circle cx="246" cy="255" r="16" fill="#e3f5ed"/><path class="chk" d="M238 255 l6 7 l12 -14" fill="none" stroke="#2a9473" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="272" y="244" width="64" height="8" rx="4" fill="#1f7a5f"/><rect x="272" y="260" width="44" height="7" rx="3.5" fill="#bfe3d3"/>
+        <rect x="218" y="296" width="132" height="38" rx="12" fill="url(#bgA)"/><rect x="254" y="311" width="60" height="8" rx="4" fill="#fff"/></g>
+      <g class="fl1"><path d="M392 196 h124 l12 198 a12 12 0 0 1 -12 13 h-124 a12 12 0 0 1 -12 -13z" fill="url(#bgA)"/><path d="M392 196 h124 l3 38 h-130z" fill="#000" opacity=".1"/><path d="M420 218 v-34 a34 34 0 0 1 68 0 v34" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".95"/><circle cx="420" cy="220" r="6" fill="#fff"/><circle cx="488" cy="220" r="6" fill="#fff"/><circle cx="454" cy="312" r="34" fill="#fff" opacity=".18"/><path d="M436 312 l14 15 l26 -31" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g class="fl3"><path d="M96 290 h92 l8 116 a10 10 0 0 1 -10 11 h-88 a10 10 0 0 1 -10 -11z" fill="url(#bgB)"/><path d="M118 306 v-24 a24 24 0 0 1 48 0 v24" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M142 340 c-12 -16 -30 -4 -18 12 l18 18 l18 -18 c12 -16 -6 -28 -18 -12z" fill="#fff" opacity=".9"/></g>
+      <g class="fl2"><rect x="318" y="352" width="74" height="60" rx="8" fill="#fff" stroke="#dceee6" stroke-width="2"/><rect x="349" y="352" width="12" height="60" fill="#3fb08a"/><rect x="312" y="338" width="86" height="22" rx="6" fill="#fff" stroke="#dceee6" stroke-width="2"/><rect x="349" y="338" width="12" height="22" fill="#3fb08a"/><path d="M355 338 c-18 -26 -40 -10 -22 0z M355 338 c18 -26 40 -10 22 0z" fill="#3fb08a"/></g>
+      <g class="sway2"><path d="M520 408 C528 350 520 316 506 286" stroke="#3a9c7b" stroke-width="4" fill="none"/><path d="M506 286 c34 -12 44 -44 34 -70 c-30 8 -44 36 -34 70z" fill="#8fd3b6"/></g>
+      <path class="tw" d="M410 88 l8 20 l20 8 l-20 8 l-8 20 l-8 -20 l-20 -8 l20 -8z" fill="#e0a868"/>
+      <path class="tw2" d="M150 110 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6z" fill="#3fb08a"/>
+      <path class="tw2" d="M506 150 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5z" fill="#3fb08a"/>
+      <circle class="tw" cx="178" cy="214" r="6" fill="#e0a868"/>
+    </svg></div>
   </div>
-  <div class="h-side"><div class="facts"><div><b>٧</b><span data-i="f1">أيام للإلغاء من الاستلام</span></div><div><b>١٥</b><span data-i="f2">يوم تأخير يحق لك بعدها تلغين</span></div><div><b class="tel">1900</b><span data-i="f3">وزارة التجارة</span></div></div>
-    <div class="stamp" aria-hidden="true"><span data-i-html="stamp">حقّك<br>محفوظ</span></div></div>
+
+  <div class="fr">
+    <h2 data-i="fT">أشهر المواقف</h2>
+    <div class="feat" id="feat"></div>
+  </div>
+
+  <div class="fr">
+    <h2 data-i="tT">وش تبين تسوين؟</h2>
+    <div class="tiles">
+      <a class="tile" href="#ask"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 13.5v.5m0-8a2.5 2.5 0 0 1 1.5 4.5c-.9.6-1.5 1-1.5 2"/></svg></span><span data-i="tb1">اسألي</span></a>
+      <a class="tile" href="#cases"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><span data-i="nav1">المواقف</span></a>
+      <a class="tile" href="#check"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span data-i="nav3">افحصي المتجر</span></a>
+      <a class="tile" href="#calc"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span><span data-i="nav4">حاسبة المهلة</span></a>
+      <a class="tile" href="#help"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 20V5a1 1 0 0 1 1-1h11l-2.5 4L17 12H6"/></svg></span><span data-i="nav5">الشكوى</span></a>
+    </div>
+  </div>
+
+  <div class="why">
+    <i class="lf"></i><i class="lf"></i><i class="lf"></i>
+    <h2 data-i="wT">ليش «وش حقّي؟»</h2>
+    <p data-i="wS">لأن كثير منا يشتري أونلاين وما يعرف حقه إذا وصله منتج غلط أو تأخر طلبه. هنا تلقين حقك من نظام التجارة الإلكترونية، بكلام بسيط وخطوات واضحة.</p>
+    <div class="facts"><div><b>٧</b><span data-i="f1">أيام للإلغاء من الاستلام</span></div><div><b>١٥</b><span data-i="f2">يوم تأخير يحق لك بعدها تلغين</span></div><div><b class="tel">1900</b><span data-i="f3">وزارة التجارة</span></div></div>
+  </div>
+</div></div>
+
+<section class="sec g" id="ask"><div class="in">
+  <div class="sh"><div><h2 data-i="aT">اسألينا عن موقفك</h2><p data-i="lead">جاوبي على سؤالين، ونقولك حقك بالنظام بكلام بسيط، وكم باقي لك من المهلة، ورسالة جاهزة ترسلينها للمتجر.</p></div></div>
   <div class="sheet h-wiz"><div class="wiz" id="wiz" aria-live="polite"></div></div>
 </div></section>
 
@@ -265,7 +429,7 @@ if(location.hash==="#en")L="en";
 
 /* ---------------- UI strings ---------------- */
 const T={
-ar:{brand:"وش حقّي؟",nav1:"المواقف",tb1:"اسألي",tb3:"افحصي",tb4:"المهلة",nav2:"صح ولا خطأ؟",nav3:"افحصي المتجر",nav4:"حاسبة المهلة",nav5:"الشكوى",eb:"دليل حقوق المتسوّق أونلاين في السعودية",h1:"وش <em>حقّي</em>؟",
+ar:{brand:"وش حقّي؟",bLead:"حقك بالنظام بكلام بسيط، مع رسالة جاهزة ترسلينها للمتجر.",bCta:"اعرفي حقك الآن",fT:"أشهر المواقف",fMore:"اعرفي حقك",tT:"وش تبين تسوين؟",wT:"ليش «وش حقّي؟»",wS:"لأن كثير منا يشتري أونلاين وما يعرف حقه إذا وصله منتج غلط أو تأخر طلبه. هنا تلقين حقك من نظام التجارة الإلكترونية، بكلام بسيط وخطوات واضحة.",aT:"اسألينا عن موقفك",nav1:"المواقف",tb1:"اسألي",tb3:"افحصي",tb4:"المهلة",nav2:"صح ولا خطأ؟",nav3:"افحصي المتجر",nav4:"حاسبة المهلة",nav5:"الشكوى",eb:"دليل حقوق المتسوّق أونلاين في السعودية",h1:"وش <em>حقّي</em>؟",
 lead:"جاوبي على سؤالين، ونقولك حقك بالنظام بكلام بسيط، وكم باقي لك من المهلة، ورسالة جاهزة ترسلينها للمتجر.",f1:"أيام للإلغاء من الاستلام",f2:"يوم تأخير يحق لك بعدها تلغين",f3:"وزارة التجارة",stamp:"حقّك<br>محفوظ",
 cTitle:"كل المواقف",cSub:"افتحي موقفك: حقك، والحالات اللي ما ينطبق فيها، والخطوات، ورسالة جاهزة.",meT:"✎ عبّي بياناتك وتنحط في الرسالة (اختياري)",fStore:"اسم المتجر",fOrder:"رقم الطلب",fDate:"تاريخ الطلب",fName:"اسمك",search:"ابحثي: تأخر، تالف، فاتورة، رسائل…",empty:"ما لقينا موقف بهذا الوصف. جرّبي كلمة ثانية.",
 mTitle:"صح ولا خطأ؟",mSub:"كلام نسمعه كثير. اختاري جوابك وشوفي الصح.",yes:"صح",no:"خطأ",score:(a,b)=>`عرفتي ${a} من ${b}`,
@@ -282,7 +446,7 @@ days:n=>{const a=Number(n).toLocaleString("ar-SA");return n===1?"يوم":n===2?"
 meterR:(d)=>`مرّ ${d} من ٧`,meterO:(d)=>`مرّ ${d} من ١٥`,
 gauge:{start:"جاوبي على الأسئلة",startS:"كل ما جاوبتي أكثر، صارت النتيجة أدق.",ok:"يبان موثوق",okS:"ما لقينا علامات خطر. ومع كذا احتفظي بالفاتورة وصوّري صفحة الطلب.",warn:"انتبهي",warnS:"فيه علامات تستاهل تتأكدين منها قبل الدفع:",bad:"لا تشترين",badS:"فيه علامات خطر واضحة:",ans:(a,b)=>`جاوبتي ${a} من ${b}`}
 },
-en:{brand:"Know Your Rights",nav1:"Situations",tb1:"Ask",tb3:"Check",tb4:"Deadlines",nav2:"True or false?",nav3:"Check a store",nav4:"Deadline calculator",nav5:"Complaints",eb:"Online shoppers' rights in Saudi Arabia",h1:"What are my <em>rights</em>?",
+en:{brand:"Know Your Rights",bLead:"Your rights under Saudi law in plain words, with a ready message for the store.",bCta:"Find out your rights",fT:"Most common situations",fMore:"See your right",tT:"What do you need?",wT:"Why Know Your Rights?",wS:"Many of us shop online without knowing our rights when the wrong product arrives or an order is late. Here you find your rights under the E-Commerce Law, in plain words and clear steps.",aT:"Ask about your situation",nav1:"Situations",tb1:"Ask",tb3:"Check",tb4:"Deadlines",nav2:"True or false?",nav3:"Check a store",nav4:"Deadline calculator",nav5:"Complaints",eb:"Online shoppers' rights in Saudi Arabia",h1:"What are my <em>rights</em>?",
 lead:"Answer two questions. We'll tell you your rights under Saudi law in plain words, how much time you have left, and give you a ready message for the store.",f1:"days to cancel after delivery",f2:"days of delay before you can cancel",f3:"Ministry of Commerce",stamp:"Your<br>right",
 cTitle:"All situations",cSub:"Open your situation: your right, when it doesn't apply, the steps, and a ready message.",meT:"✎ Fill in your details to complete the message (optional)",fStore:"Store name",fOrder:"Order number",fDate:"Order date",fName:"Your name",search:"Search: late, damaged, invoice, messages…",empty:"No situation matches that. Try another word.",
 mTitle:"True or false?",mSub:"Things people often say. Pick your answer and see.",yes:"True",no:"False",score:(a,b)=>`${a} of ${b} correct`,
@@ -460,12 +624,23 @@ function calc(){const D=T[L].days,ar=L==="ar";
  const d=daysSince($("c-ord").value);o="";if(d!==null){o=meter(d,15,T[L].meterO(nf(Math.max(0,d))),true)+`<div class="res" style="color:var(--${d>15?"ok":"warn"})">${d>15?(ar?"يحق لك تلغين وتسترجعين فلوسك الحين":"You can cancel and get a refund now"):(ar?`باقي ${D(16-d)} ويحق لك تلغين`:`${D(16-d)} until you can cancel`)}</div>`}$("c-ord-out").innerHTML=o}
 $("c-rec").addEventListener("input",calc);$("c-ord").addEventListener("input",calc);
 
+/* ---------------- featured situations ---------------- */
+const FPIC={
+ wrong:'<svg viewBox="0 0 120 100"><rect x="8" y="34" width="44" height="44" rx="6" fill="var(--ac)"/><path d="M8 48h44M30 34v44" stroke="var(--sheet)" stroke-width="3" opacity=".6"/><rect x="68" y="34" width="44" height="44" rx="22" fill="var(--sand)"/><path d="M52 14h16M52 24h16M66 8l-12 22" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/></svg>',
+ damaged:'<svg viewBox="0 0 120 100"><path d="M22 36l38-16 38 16v40l-38 16-38-16z" fill="var(--sand)"/><path d="M22 36l38 16 38-16M60 52v40" stroke="var(--sheet)" stroke-width="3" fill="none" opacity=".7"/><path d="M52 22l8 14-9 10 11 12-6 12" fill="none" stroke="var(--bad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ late:'<svg viewBox="0 0 120 100"><circle cx="60" cy="52" r="36" fill="var(--sheet)" stroke="var(--sand)" stroke-width="6"/><path d="M60 30v22l14 12" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 8h28" stroke="var(--sand)" stroke-width="6" stroke-linecap="round"/></svg>',
+ change:'<svg viewBox="0 0 120 100"><rect x="30" y="34" width="60" height="48" rx="6" fill="var(--ac)"/><path d="M30 48h60" stroke="var(--sheet)" stroke-width="3" opacity=".6"/><path d="M88 22a34 34 0 0 0-58 4" fill="none" stroke="var(--ok)" stroke-width="6" stroke-linecap="round"/><path d="M22 12l6 16 16-6" fill="none" stroke="var(--ok)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+function renderFeat(){const box=$("feat");if(!box)return;
+ box.innerHTML=CASES.slice(0,4).map(c=>{const d=c[L];return `<button class="fcard" type="button" data-open="${c.id}"><span class="pic">${FPIC[c.id]||`<span class="gl">${c.ic}</span>`}</span><span class="tx"><b>${esc(d.t)}</b><small>${esc(d.s)}</small><i>${esc(t("fMore"))}</i></span></button>`}).join("");
+ box.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>openCase(b.dataset.open))}
+
 /* ---------------- language ---------------- */
 function applyLang(){const R=document.documentElement;R.lang=L;R.dir=L==="ar"?"rtl":"ltr";document.body.dir=R.dir;document.title=L==="ar"?"وش حقّي؟":"Know Your Rights · Saudi online shopping";
  document.querySelectorAll("[data-i]").forEach(e=>{const v=T[L][e.dataset.i];if(typeof v==="string")e.textContent=v});
  document.querySelectorAll("[data-i-html]").forEach(e=>{e.innerHTML=T[L][e.dataset.iHtml]});
  $("q").placeholder=t("search");$("lang").textContent=t("lang");
- renderCases();renderWiz();renderChecks();calc();
+ renderCases();renderWiz();renderChecks();calc();renderFeat();
  try{localStorage.setItem("haqqi-lang",L)}catch(e){}}
 $("lang").onclick=()=>{L=L==="ar"?"en":"ar";applyLang()};
 applyLang();
